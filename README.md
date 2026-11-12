@@ -91,15 +91,12 @@ class Ghism:
 
 ---
 
-### 📈 Activity
+### 📈 Streak
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=ghism137&theme=transparent&hide_border=true&ring=1FAF6B&fire=FFB347&currStreakLabel=1FAF6B" alt="streak" height="170">
 </p>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ghism137&bg_color=00000000&color=1faf6b&line=1faf6b&point=ffb347&area=true&hide_border=true" alt="activity graph" width="100%">
-</p>
 
 ---
 
