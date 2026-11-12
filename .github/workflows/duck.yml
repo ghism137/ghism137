@@ -1,0 +1,35 @@
+name: Duck eats contributions 🦆
+
+on:
+  schedule:
+    - cron: "17 */12 * * *"   # 2 lần/ngày
+  workflow_dispatch:           # chạy tay trong tab Actions
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  duck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate duck SVGs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/duck.py --user ${{ github.repository_owner }} --out dist
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "quack: update duck"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
