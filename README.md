@@ -26,7 +26,7 @@ class Ghism:
     name     = "Trần Thái Hưng"
     alias    = "ghism"
     major    = "Computer Science — Data Science & AI"
-    motto    = "My life matters."
+    motto    = "My lives matters."
 
     interests = ["ML math", "competitive programming", "AI agents",
                  "quant finance", "history", "philosophy"]
